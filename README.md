@@ -208,6 +208,26 @@ Altere o conteúdo do arquivo `./projeto/db/db.json`, como informado abaixo:
 Nova saída:
 
 ```text
+$ json-server --watch db.json
+--watch/-w can be omitted, JSON Server 1+ watches for file changes by default
+JSON Server started on PORT :3000
+Press CTRL-C to stop
+Watching db.json...
+
+♡( ◡‿◡ )
+
+Index:
+http://localhost:3000/
+
+Static files:
+Serving ./public directory if it exists
+
+Endpoints:
+http://localhost:3000/usuarios
+
+Endpoints:
+http://localhost:3000/usuarios
+http://localhost:3000/tarefas
 ```
 
 ![Nova saída do JSON Server](nova-saida-json-server.png)
