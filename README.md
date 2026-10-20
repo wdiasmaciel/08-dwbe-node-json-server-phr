@@ -554,61 +554,13 @@ GET {{url}}/usuarios?_sort=-nome
 GET {{url}}/usuarios?nome:contains=ana
 ```
 
-Criar os arquivos `04-index.js` e `04-index.http`.
+# Exercícios
 
-Conteúdo do arquivo `04-index.http`:
+Usando `JSON Server`, `HTML`, `CSS`, `JS` e a extensão `REST Client`, implemente um CRUD (CREATE, READ, UPDATE, DELETE) de:
 
-```text
-# Isto é um comentário.
-//Isto também é um comentário.
+1. Produtos de uma padaria. 
 
-// Variável:
-@host = http://localhost:3000
+2. Eventos de uma agência de eventos. Estabeleça o relacionamento dos eventos com as atrações e cidades em que o evento ocorrerá.
 
-### Isto é um separador de requisições:
-GET {{host}}/dados
-```
+3. Pacotes de viagem de uma agência de turismo. Estabeleça o relacionamento dos pacotes de viagem com as cidades de origem, cidades de destino e promoções.
 
-Criar os arquivos `05-index.js` e `05-index.http`.
-
-Conteúdo do arquivo `05-index.http`:
-
-```text
-# Isto é um comentário.
-//Isto também é um comentário.
-
-// Variável:
-@host = http://localhost:3000
-
-### Isto é um separador de requisições:
-GET {{host}}/dados
-```
-
-Criar os arquivos `06-index.js` e `06-index.http`.
-
-Conteúdo do arquivo `06-index.http`:
-
-```text
-# Isto é um comentário.
-//Isto também é um comentário.
-
-// Variável:
-@host = http://localhost:3000
-
-### Isto é um separador de requisições:
-GET {{host}}/dados
-```
-
-Criar os demais arquivos `#-index.js` e `#-index.http`.
-
----
-
-## Exercícios
-
-Usando `Node.js` e o módulo `http`, escreva uma `API` que:
-
-1. Retorne a lista de produtos de uma loja. Teste a `API`, usando a extensão `REST Client` do `VS Code`. Também apresente uma página com os dados retornados. Aplique estilos CSS à página. A porta da aplicação deve ser armazenada numa variável de ambiente.
-
-2. Retorne a lista de pacotes viagem de uma agência de turismo. Teste a `API`, usando a extensão `REST Client` do `VS Code`. Também apresente uma página com os dados retornados. Aplique estilos CSS à página. A porta da aplicação deve ser armazenada numa variável de ambiente.
-
-3. Retorne a lista de eventos de um site de eventos. Teste a `API`, usando a extensão `REST Client` do `VS Code`. Também apresente uma página com os dados retornados. Aplique estilos CSS à página. A porta da aplicação deve ser armazenada numa variável de ambiente.
