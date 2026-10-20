@@ -514,25 +514,44 @@ No VS Code, instalar a extensão `REST Client`:
 ![Extensão REST Client](./img/restclient.png)
 
 
-Criar o arquivo `teste.http`
+Criar o arquivo `teste.http`:
+
 ```text
 # Isto é um comentário.
 //Isto também é um comentário.
 
-### Isto é um separador de requisições:
-GET http://localhost:3000
+// Variável:
+@url = https://solid-spork-q79wg9gg79wrhwpj-3000.app.github.dev
 
 ### Isto é um separador de requisições:
-GET http://localhost:3000/
+GET {{url}}/
 
 ### Isto é um separador de requisições:
-GET http://localhost:3000/usuarios
+GET {{url}}/usuarios
 
 ### Isto é um separador de requisições:
-GET http://localhost:3000/contato
+GET {{url}}/usuarios/1
 
 ### Isto é um separador de requisições:
-GET http://localhost:3000/tarefas
+GET {{url}}/tarefas
+
+### Isto é um separador de requisições:
+GET {{url}}/tarefas/1
+
+### 
+GET {{url}}/tarefas?_page=1&_per_page=2
+
+### 
+GET {{url}}/usuarios?nome=Ana
+
+### Para ordenar de forma ascendente:
+GET {{url}}/usuarios?_sort=nome
+
+### Para ordenar de forma descendente, use um sinal de menos antes do campo:
+GET {{url}}/usuarios?_sort=-nome
+
+### Para buscar “ana” dentro do campo nome, use o operador contains, que ignora maiúsculas e minúsculas:
+GET {{url}}/usuarios?nome:contains=ana
 ```
 
 Criar os arquivos `04-index.js` e `04-index.http`.
