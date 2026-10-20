@@ -235,6 +235,13 @@ http://localhost:3000/tarefas
 ![Novo conteúdo do banco de dados](novo-conteudo-do-banco-de-dados.png)
 
 
+# Cliente
+
+Criar a pasta `./projeto/public/`:
+
+```bash
+mkdir public
+```
 
 
 99999999999999
