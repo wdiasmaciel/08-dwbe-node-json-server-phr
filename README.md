@@ -107,7 +107,7 @@ mkdir db
 cd db
 ```
 
-Crie o arquivo `db.json`:
+Crie o arquivo `./projeto/db/db.json`:
 
 ```bash
 touch db.json
