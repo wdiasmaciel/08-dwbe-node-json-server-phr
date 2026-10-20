@@ -169,6 +169,7 @@ http://localhost:3000/usuarios
 
 ![Saída do JSON Server](saida-json-server.png)
 
+![Conteúdo do banco de dados](conteudo-do-banco-de-dados.png)
 
 99999999999999
 ```bash
