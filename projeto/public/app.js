@@ -21,12 +21,12 @@ function listarTarefaPorId() {
         });
 }
 
-function inserirTarefa() {
+async function inserirTarefa() {
     const titulo = document.getElementById("post-titulo-da-tarefa").value;
     const status = document.getElementById("post-status-da-tarefa").value;
 
     const url = 'https://solid-spork-q79wg9gg79wrhwpj-3000.app.github.dev/tarefas';
-    fetch(url, {
+    await fetch(url, {
         method: "POST",
         headers: {
             "Content-Type": "application/json",
