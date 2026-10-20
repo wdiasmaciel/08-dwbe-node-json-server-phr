@@ -1,23 +1,20 @@
 async function listarTarefas() {
-    const container = document.getElementById('container');
-
     const url = 'https://solid-spork-q79wg9gg79wrhwpj-3000.app.github.dev/tarefas';
     await fetch(url)
         .then((resposta) => resposta.json())
         .then((dados) => {
-            container.innerHTML = JSON.stringify(dados);
+            imprimir(dados);
         });
 }
 
 async function listarTarefaPorId() {
     const id = document.getElementById("get-id-da-tarefa").value;
-    const container = document.getElementById('container');
 
     const url = `https://solid-spork-q79wg9gg79wrhwpj-3000.app.github.dev/tarefas/${id}`;
     await fetch(url)
         .then((resposta) => resposta.json())
         .then((dados) => {
-            container.innerHTML = JSON.stringify(dados);
+            imprimir(dados);
         });
 }
 
@@ -70,4 +67,18 @@ async function excluirTarefa() {
     });
 
     listarTarefas();
+}
+
+function imprimir(dados) {
+    const container = document.getElementById('container');
+    const tarefas = Array.isArray(dados) ? dados : [dados];
+
+    container.innerHTML = "";
+
+    if (tarefas.length === 0 || dados === null)
+        return;
+
+    const resp = tarefas.map((tarefa) => { return `<p>${tarefa}</p>` });
+
+    container.innerHTML = resp;
 }
