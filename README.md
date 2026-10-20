@@ -10,7 +10,6 @@ https://app.notion.com/p/JSON-Server-a9044ced3625829f912781a3c0c55f3d
 
 ## Comandos
 
-
 ```bash
 sudo apt update
 ```
