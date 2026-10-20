@@ -31,11 +31,11 @@ npm -v
 ```
 
 ```bash
-mkdir projeto-node
+mkdir projeto
 ```
 
 ```bash
-cd projeto-node
+cd projeto
 ```
 
 ```bash
