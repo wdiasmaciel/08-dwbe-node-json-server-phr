@@ -10,6 +10,7 @@ https://app.notion.com/p/JSON-Server-a9044ced3625829f912781a3c0c55f3d
 
 ## Comandos
 
+
 ```bash
 sudo apt update
 ```
@@ -30,3 +31,132 @@ npm install -g npm@11.19.0
 npm -v
 ```
 
+```bash
+mkdir projeto-node
+```
+
+```bash
+cd projeto-node
+```
+
+```bash
+npm init -y
+```
+
+No arquivo `package.json`, substituir ` "type": "commonjs"` por ` "type": "module"`:
+
+```text
+{
+  "name": "projeto-node",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module"
+}
+```
+
+```bash
+node 01-index.js
+```
+
+No VS Code, instalar a extensão `REST Client`:
+
+![Extensão REST Client](./img/restclient.png)
+
+
+Criar os arquivos `02-index.js` e `02-index.http`.
+
+Conteúdo do arquivo `02-index.http`:
+
+```text
+GET http://localhost:3000
+```
+
+Criar os arquivos `03-index.js` e `03-index.http`.
+
+Conteúdo do arquivo `03-index.http`:
+
+```text
+# Isto é um comentário.
+//Isto também é um comentário.
+
+### Isto é um separador de requisições:
+GET http://localhost:3000
+
+### Isto é um separador de requisições:
+GET http://localhost:3000/
+
+### Isto é um separador de requisições:
+GET http://localhost:3000/sobre
+
+### Isto é um separador de requisições:
+GET http://localhost:3000/contato
+
+### Isto é um separador de requisições:
+GET http://localhost:3000/produtos
+```
+
+Criar os arquivos `04-index.js` e `04-index.http`.
+
+Conteúdo do arquivo `04-index.http`:
+
+```text
+# Isto é um comentário.
+//Isto também é um comentário.
+
+// Variável:
+@host = http://localhost:3000
+
+### Isto é um separador de requisições:
+GET {{host}}/dados
+```
+
+Criar os arquivos `05-index.js` e `05-index.http`.
+
+Conteúdo do arquivo `05-index.http`:
+
+```text
+# Isto é um comentário.
+//Isto também é um comentário.
+
+// Variável:
+@host = http://localhost:3000
+
+### Isto é um separador de requisições:
+GET {{host}}/dados
+```
+
+Criar os arquivos `06-index.js` e `06-index.http`.
+
+Conteúdo do arquivo `06-index.http`:
+
+```text
+# Isto é um comentário.
+//Isto também é um comentário.
+
+// Variável:
+@host = http://localhost:3000
+
+### Isto é um separador de requisições:
+GET {{host}}/dados
+```
+
+Criar os demais arquivos `#-index.js` e `#-index.http`.
+
+---
+
+## Exercícios
+
+Usando `Node.js` e o módulo `http`, escreva uma `API` que:
+
+1. Retorne a lista de produtos de uma loja. Teste a `API`, usando a extensão `REST Client` do `VS Code`. Também apresente uma página com os dados retornados. Aplique estilos CSS à página. A porta da aplicação deve ser armazenada numa variável de ambiente.
+
+2. Retorne a lista de pacotes viagem de uma agência de turismo. Teste a `API`, usando a extensão `REST Client` do `VS Code`. Também apresente uma página com os dados retornados. Aplique estilos CSS à página. A porta da aplicação deve ser armazenada numa variável de ambiente.
+
+3. Retorne a lista de eventos de um site de eventos. Teste a `API`, usando a extensão `REST Client` do `VS Code`. Também apresente uma página com os dados retornados. Aplique estilos CSS à página. A porta da aplicação deve ser armazenada numa variável de ambiente.
