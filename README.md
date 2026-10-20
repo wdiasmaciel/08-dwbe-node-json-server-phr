@@ -486,7 +486,7 @@ GET /tarefas?usuarioId=1
 
 Executar:
 
-```json
+```bash
 npm run api
 ```
 
