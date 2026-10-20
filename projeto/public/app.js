@@ -1,20 +1,20 @@
-function listarTarefas() {
+async function listarTarefas() {
     const container = document.getElementById('container');
 
     const url = 'https://solid-spork-q79wg9gg79wrhwpj-3000.app.github.dev/tarefas';
-    fetch(url)
+    await fetch(url)
         .then((resposta) => resposta.json())
         .then((dados) => {
             container.innerHTML = JSON.stringify(dados);
         });
 }
 
-function listarTarefaPorId() {
+async function listarTarefaPorId() {
     const id = document.getElementById("get-id-da-tarefa").value;
     const container = document.getElementById('container');
 
     const url = `https://solid-spork-q79wg9gg79wrhwpj-3000.app.github.dev/tarefas/${id}`;
-    fetch(url)
+    await fetch(url)
         .then((resposta) => resposta.json())
         .then((dados) => {
             container.innerHTML = JSON.stringify(dados);
@@ -40,13 +40,13 @@ async function inserirTarefa() {
     listarTarefas();
 }
 
-function atualizarTarefa() {
+async function atualizarTarefa() {
     const id = document.getElementById("put-id-da-tarefa").value;
     const titulo = document.getElementById("put-titulo-da-tarefa").value;
     const status = document.getElementById("put-status-da-tarefa").value;
 
     const url = `https://solid-spork-q79wg9gg79wrhwpj-3000.app.github.dev/tarefas/${id}`;
-    fetch(url, {
+    await fetch(url, {
         method: "PUT",
         headers: {
             "Content-Type": "application/json",
@@ -61,11 +61,11 @@ function atualizarTarefa() {
     listarTarefas();
 }
 
-function excluirTarefa() {
+async function excluirTarefa() {
     const id = document.getElementById("delete-id-da-tarefa").value;
 
     const url = `https://solid-spork-q79wg9gg79wrhwpj-3000.app.github.dev/tarefas/${id}`;
-    fetch(url, {
+    await fetch(url, {
         method: "DELETE"
     });
 
