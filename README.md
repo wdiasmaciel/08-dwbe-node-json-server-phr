@@ -167,9 +167,9 @@ Endpoints:
 http://localhost:3000/usuarios
 ```
 
-![Saída do JSON Server](saida-json-server.png)
+![Saída do JSON Server](./img/saida-json-server.png)
 
-![Conteúdo do banco de dados](conteudo-do-banco-de-dados.png)
+![Conteúdo do banco de dados](./img/conteudo-do-banco-de-dados.png)
 
 
 # Alteração do Banco de Dados
@@ -230,9 +230,9 @@ http://localhost:3000/usuarios
 http://localhost:3000/tarefas
 ```
 
-![Nova saída do JSON Server](nova-saida-json-server.png)
+![Nova saída do JSON Server](./img/nova-saida-json-server.png)
 
-![Novo conteúdo do banco de dados](novo-conteudo-do-banco-de-dados.png)
+![Novo conteúdo do banco de dados](./img/novo-conteudo-do-banco-de-dados.png)
 
 ---
 
