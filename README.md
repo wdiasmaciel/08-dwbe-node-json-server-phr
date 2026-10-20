@@ -146,6 +146,27 @@ npx json-server --watch db.json
 (neste comando, ele executa localmente sem estar instalado globalmente)
 ```
 
+Saída:
+
+```text
+$ json-server --watch db.json
+--watch/-w can be omitted, JSON Server 1+ watches for file changes by default
+JSON Server started on PORT :3000
+Press CTRL-C to stop
+Watching db.json...
+
+♡( ◡‿◡ )
+
+Index:
+http://localhost:3000/
+
+Static files:
+Serving ./public directory if it exists
+
+Endpoints:
+http://localhost:3000/usuarios
+```
+
 99999999999999
 ```bash
 node 01-index.js
