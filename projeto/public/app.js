@@ -78,7 +78,7 @@ function imprimir(dados) {
     if (tarefas.length === 0 || dados === null)
         return;
 
-    const resp = tarefas.map((tarefa) => { return `<p>${JSON.stringify(tarefa)}</p>` });
+    const resp = tarefas.map((tarefa) => { return `<p>${JSON.stringify(tarefa)}</p>` }).join("");
 
     container.innerHTML = resp;
 }
