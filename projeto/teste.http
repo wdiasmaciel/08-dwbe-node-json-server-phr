@@ -20,4 +20,7 @@ GET {{url}}/tarefas
 GET {{url}}/tarefas/1
 
 ### 
-GET {{url}}/tarefas/1
+GET {{url}}/tarefas?_page=1&_limit=2
+
+### 
+GET {{url}}/usuarios?nome=Ana
