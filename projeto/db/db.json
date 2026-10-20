@@ -1,26 +1,32 @@
 {
   "usuarios": [
     {
-      "id":1,
-      "nome":"Ana",
-      "email":"ana@email.com"
+      "id": "1",
+      "nome": "Ana",
+      "email": "ana@email.com"
     },
     {
-      "id":2,
-      "nome":"Carlos",
-      "email":"carlos@email.com"
+      "id": "2",
+      "nome": "Carlos",
+      "email": "carlos@email.com"
     }
   ],
   "tarefas": [
-     {
-       "id":1,
-       "titulo":"Estudar API",
-       "status":"Pendente"
-     },
-     {
-       "id":2,
-       "titulo":"Fazer exercício",
-       "status":"Concluído"
-     }
-   ]
+    {
+      "id": "1",
+      "titulo": "Estudar API",
+      "status": "Pendente"
+    },
+    {
+      "id": "2",
+      "titulo": "Fazer exercício",
+      "status": "Concluído"
+    },
+    {
+      "titulo": "aaaaa",
+      "status": "aaaaa",
+      "id": "Ty_33xziMkU"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
 }
