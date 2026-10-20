@@ -113,6 +113,25 @@ Crie o arquivo `./projeto/db/db.json`:
 touch db.json
 ```
 
+Informe o conteúdo abaixo no arquivo `./projeto/db/db.json`:
+
+```js
+{
+  "usuarios": [
+    {
+      "id":1,
+      "nome":"Ana",
+      "email":"ana@email.com"
+    },
+    {
+      "id":2,
+      "nome":"Carlos",
+      "email":"carlos@email.com"
+    }
+  ]
+}```
+
+
 99999999999999
 ```bash
 node 01-index.js
