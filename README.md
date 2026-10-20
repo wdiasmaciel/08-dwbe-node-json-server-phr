@@ -237,6 +237,8 @@ http://localhost:3000/tarefas
 
 # Cliente
 
+Instalar a extensão `Live Server` do `VS Code`.
+
 Criar a pasta `./projeto/public/`:
 
 ```bash
