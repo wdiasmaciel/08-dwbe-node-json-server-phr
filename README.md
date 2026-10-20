@@ -248,12 +248,140 @@ mkdir public
 Criar o arquivo `./projeto/public/index.html`:
 
 ```html
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API</title>
+    <script src="app.js"></script>
+</head>
+
+<body>
+    <div><button onclick="listarTarefas()">Buscar Tarefas</button></div>
+    <br />
+
+    <div>
+        <input id="get-id-da-tarefa" placeholder="id"/>
+        <button onclick="listarTarefaPorId()">Buscar Tarefa Por ID</button>
+    </div>
+    <br />
+
+    <form>
+        <input id="post-titulo-da-tarefa" type="text" placeholder="titulo">
+        <input id="post-status-da-tarefa" type="text" placeholder="status">
+        <button type="button" onclick="inserirTarefa()">Inserir Tarefa</button>
+    </form>
+    <br />
+
+    <form>
+        <input id="put-id-da-tarefa"type="text" placeholder="id">
+        <input id="put-titulo-da-tarefa"type="text" placeholder="titulo">
+        <input id="put-status-da-tarefa" type="text" placeholder="status">
+        <button type="button" onclick="atualizarTarefa()">Atualizar Tarefa</button>
+    </form>
+    <br />
+
+    <div>
+        <input id="delete-id-da-tarefa" placeholder="id"/>
+        <button onclick="excluirTarefa()">Exluir Tarefa</button>
+    </div>
+    <br />
+
+    <div id="container"></div>
+</body>
+
+</html>
 ```
 
 Criar o arquivo `./projeto/public/app.js`:
 
 ```js
+async function listarTarefas() {
+    const url = 'https://solid-spork-q79wg9gg79wrhwpj-3000.app.github.dev/tarefas';
+    await fetch(url)
+        .then((resposta) => resposta.json())
+        .then((dados) => {
+            imprimir(dados);
+        });
+}
 
+async function listarTarefaPorId() {
+    const id = document.getElementById("get-id-da-tarefa").value;
+
+    const url = `https://solid-spork-q79wg9gg79wrhwpj-3000.app.github.dev/tarefas/${id}`;
+    await fetch(url)
+        .then((resposta) => resposta.json())
+        .then((dados) => {
+            imprimir(dados);
+        });
+}
+
+async function inserirTarefa() {
+    const titulo = document.getElementById("post-titulo-da-tarefa").value;
+    const status = document.getElementById("post-status-da-tarefa").value;
+
+    const url = 'https://solid-spork-q79wg9gg79wrhwpj-3000.app.github.dev/tarefas';
+    await fetch(url, {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+            titulo: titulo,
+            status: status
+        }),
+    });
+
+    listarTarefas();
+}
+
+async function atualizarTarefa() {
+    const id = document.getElementById("put-id-da-tarefa").value;
+    const titulo = document.getElementById("put-titulo-da-tarefa").value;
+    const status = document.getElementById("put-status-da-tarefa").value;
+
+    const url = `https://solid-spork-q79wg9gg79wrhwpj-3000.app.github.dev/tarefas/${id}`;
+    await fetch(url, {
+        method: "PUT",
+        headers: {
+            "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+            id: id,
+            titulo: titulo,
+            status: status,
+        }),
+    });
+
+    listarTarefas();
+}
+
+async function excluirTarefa() {
+    const id = document.getElementById("delete-id-da-tarefa").value;
+
+    const url = `https://solid-spork-q79wg9gg79wrhwpj-3000.app.github.dev/tarefas/${id}`;
+    await fetch(url, {
+        method: "DELETE"
+    });
+
+    listarTarefas();
+}
+
+function imprimir(dados) {
+    const container = document.getElementById('container');
+    const tarefas = Array.isArray(dados) ? dados : [dados];
+
+    container.innerHTML = "";
+
+    if (tarefas.length === 0 || dados === null)
+        return;
+
+    const resp = tarefas.map((tarefa) => { return `<p>${JSON.stringify(tarefa)}</p>` }).join("");
+
+    container.innerHTML = resp;
+}
 ```
 
 Na aba `Portas` do terminal, tornar a porta da aplicação `pública`.
