@@ -2,19 +2,22 @@
 //Isto também é um comentário.
 
 // Variável:
-@url = https://solid-spork-q79wg9gg79wrhwpj-3000.app.github.dev/
+@url = https://solid-spork-q79wg9gg79wrhwpj-3000.app.github.dev
 
 ### Isto é um separador de requisições:
-GET {{url}}:3000
+GET {{url}}/
 
 ### Isto é um separador de requisições:
-GET {{url}}:3000/
+GET {{url}}/usuarios
 
 ### Isto é um separador de requisições:
-GET {{url}}:3000/usuarios
+GET {{url}}/usuarios/1
 
 ### Isto é um separador de requisições:
-GET {{url}}:3000/contato
+GET {{url}}/tarefas
 
 ### Isto é um separador de requisições:
-GET {{url}}:3000/tarefas
+GET {{url}}/tarefas/1
+
+### 
+GET {{url}}/tarefas/1
