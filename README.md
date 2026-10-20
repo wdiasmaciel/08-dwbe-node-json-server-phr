@@ -256,6 +256,9 @@ Criar o arquivo `./projeto/public/app.js`:
 
 ```
 
+Na aba `Portas` do terminal, tornar a porta da aplicação `pública`.
+
+
 99999999999999
 ```bash
 node 01-index.js
