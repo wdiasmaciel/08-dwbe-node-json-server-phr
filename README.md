@@ -97,7 +97,7 @@ Caso seja instalado no projeto, observar as alterações no arquivo `package.jso
 
 ## Criando o Projeto
 
-Crie uma pasta `db/`:
+Crie uma pasta `./projeto/db/`:
 
 ```bash
 mkdir db
