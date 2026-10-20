@@ -167,6 +167,9 @@ Endpoints:
 http://localhost:3000/usuarios
 ```
 
+![Saída do JSON Server](saida-json-server.png)
+
+
 99999999999999
 ```bash
 node 01-index.js
