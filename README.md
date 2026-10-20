@@ -466,7 +466,7 @@ Exemplo:
 }
 ```
 
-Buscar tarefas de um usuário:
+## Buscar tarefas de um usuário:
 
 ```
 GET /tarefas?usuarioId=1
@@ -507,10 +507,7 @@ projeto/
 └── README.md
 ```
 
-99999999999999
-```bash
-node 01-index.js
-```
+## REST Client
 
 No VS Code, instalar a extensão `REST Client`:
 
