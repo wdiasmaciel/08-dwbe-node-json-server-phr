@@ -95,7 +95,23 @@ Caso seja instalado no projeto, observar as alterações no arquivo `package.jso
 }
 ```
 
+## Criando o Projeto
 
+Crie uma pasta `db/`:
+
+```bash
+mkdir db
+```
+
+```bash
+cd api-fake
+```
+
+Crie o arquivo `db.json`:
+
+```
+db.json
+```
 
 99999999999999
 ```bash
