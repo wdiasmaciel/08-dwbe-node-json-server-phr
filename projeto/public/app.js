@@ -4,7 +4,7 @@ function listarTarefas() {
     fetch(url)
         .then((resposta) => resposta.json())
         .then((dados) => {
-            container.innerHTML = dados;
+            container.innerHTML = JSON.stringify(dados);
         });
 }
 
