@@ -129,7 +129,8 @@ Informe o conteúdo abaixo no arquivo `./projeto/db/db.json`:
       "email":"carlos@email.com"
     }
   ]
-}```
+}
+```
 
 
 99999999999999
