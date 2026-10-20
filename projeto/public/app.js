@@ -36,6 +36,8 @@ function inserirTarefa() {
             status: status
         }),
     });
+
+    listarTarefas();
 }
 
 function atualizarTarefa() {
@@ -55,6 +57,8 @@ function atualizarTarefa() {
             status: status,
         }),
     });
+
+    listarTarefas();
 }
 
 function excluirTarefa() {
@@ -64,4 +68,6 @@ function excluirTarefa() {
     fetch(url, {
         method: "DELETE"
     });
+
+    listarTarefas();
 }

@@ -23,11 +23,6 @@
       "status": "Concluído"
     },
     {
-      "titulo": "aaaaa",
-      "status": "aaaaa",
-      "id": "Ty_33xziMkU"
-    },
-    {
       "titulo": "bbb",
       "status": "bbb",
       "id": "gqRUnChwHhM"
@@ -36,6 +31,11 @@
       "titulo": "c",
       "status": "c",
       "id": "G_rCtmyPoGQ"
+    },
+    {
+      "id": "eBGfiIP7Pfs",
+      "titulo": "dededede",
+      "status": "dedededede"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"
