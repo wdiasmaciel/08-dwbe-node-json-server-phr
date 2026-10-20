@@ -385,7 +385,8 @@ function imprimir(dados) {
 }
 ```
 
-Na aba `Portas` do terminal, tornar a porta da aplicação `pública`.
+**OBS**:
+> Na aba `Portas` do terminal, tornar a porta da aplicação `pública`.
 
 ## Porta
 
