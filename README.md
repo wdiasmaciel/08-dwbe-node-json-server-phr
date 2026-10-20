@@ -104,7 +104,7 @@ mkdir db
 ```
 
 ```bash
-cd api-fake
+cd db
 ```
 
 Crie o arquivo `db.json`:
