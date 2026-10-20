@@ -233,9 +233,9 @@ http://localhost:3000/tarefas
 ![Nova saída do JSON Server](nova-saida-json-server.png)
 
 ![Novo conteúdo do banco de dados](novo-conteudo-do-banco-de-dados.png)
+```
 
-
-# Cliente
+## Cliente
 
 Instalar a extensão `Live Server` do `VS Code`.
 
@@ -386,7 +386,7 @@ function imprimir(dados) {
 
 Na aba `Portas` do terminal, tornar a porta da aplicação `pública`.
 
-# Observações sobre o JSON Server
+## Porta
 
 Para rodar em outra porta:
 
@@ -394,11 +394,116 @@ Para rodar em outra porta:
 json-server --watch db.json --port4000
 ```
 
+## Usando Delay (simular Internet lenta). 
+
+Muito útil para testes:
+
 ```bash
 json-server --watch db.json --delay2000
 ```
 
+Delay:
 
+```text
+2000 ms = 2 segundos
+```
+
+## Paginação
+
+Exemplo:
+
+```
+GET /usuarios?_page=1&_limit=5
+```
+
+---
+
+## Filtro
+
+```
+GET /usuarios?nome=Ana
+```
+
+---
+
+## Ordenação
+
+```
+GET /usuarios?_sort=nome&_order=asc
+```
+
+---
+
+## Busca
+
+```
+GET /usuarios?q=ana
+```
+
+---
+
+## Relacionamento entre dados
+
+Exemplo:
+
+```json
+{
+  "usuarios": [
+    {
+      "id":1,
+      "nome":"Ana"
+    }
+  ],
+  "tarefas": [
+    {
+      "id":1,
+      "titulo":"Estudar",
+      "usuarioId":1
+    }
+  ]
+}
+```
+
+Buscar tarefas de um usuário:
+
+```
+GET /tarefas?usuarioId=1
+```
+
+---
+
+## Script no package.json (recomendado):
+
+```json
+{
+  "scripts": {
+    "api": "json-server --watch .db/db.json"
+  }
+}
+```
+
+Executar:
+
+```json
+npm run api
+```
+
+---
+
+## Estrutura recomendada de projeto
+
+```text
+projeto/
+│
+├── db/db.json
+├── package.json
+│
+├── public/
+│     index.html
+│     app.js
+│
+└── README.md
+```
 
 99999999999999
 ```bash
