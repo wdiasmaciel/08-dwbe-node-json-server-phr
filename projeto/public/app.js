@@ -37,3 +37,31 @@ function inserirTarefa() {
         }),
     });
 }
+
+function atualizarTarefa() {
+    const id = document.getElementById("put-id-da-tarefa").value;
+    const titulo = document.getElementById("put-titulo-da-tarefa").value;
+    const status = document.getElementById("put-status-da-tarefa").value;
+
+    const url = `https://solid-spork-q79wg9gg79wrhwpj-3000.app.github.dev/tarefas/${id}`;
+    fetch(url, {
+        method: "PUT",
+        headers: {
+            "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+            id: id,
+            titulo: titulo,
+            status: status,
+        }),
+    });
+}
+
+function excluirTarefa() {
+    const id = document.getElementById("delete-id-da-tarefa").value;
+
+    const url = `https://solid-spork-q79wg9gg79wrhwpj-3000.app.github.dev/tarefas/${id}`;
+    fetch(url, {
+        method: "DELETE"
+    });
+}
