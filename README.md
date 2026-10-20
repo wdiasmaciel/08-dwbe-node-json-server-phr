@@ -171,6 +171,38 @@ http://localhost:3000/usuarios
 
 ![Conteúdo do banco de dados](conteudo-do-banco-de-dados.png)
 
+
+Altere o conteúdo do arquivo `./projeto/db/db.json`, como informado abaixo:
+
+```js
+{
+  "usuarios": [
+    {
+      "id":1,
+      "nome":"Ana",
+      "email":"ana@email.com"
+    },
+    {
+      "id":2,
+      "nome":"Carlos",
+      "email":"carlos@email.com"
+    }
+  ],
+  "tarefas": [
+     {
+       "id":1,
+       "titulo":"Estudar API",
+       "status":"Pendente"
+     },
+     {
+       "id":2,
+       "titulo":"Fazer exercício",
+       "status":"Concluído"
+     }
+   ]
+}
+```
+
 99999999999999
 ```bash
 node 01-index.js
