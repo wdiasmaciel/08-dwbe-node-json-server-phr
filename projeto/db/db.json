@@ -10,5 +10,17 @@
       "nome":"Carlos",
       "email":"carlos@email.com"
     }
-  ]
+  ],
+  "tarefas": [
+     {
+       "id":1,
+       "titulo":"Estudar API",
+       "status":"Pendente"
+     },
+     {
+       "id":2,
+       "titulo":"Fazer exercício",
+       "status":"Concluído"
+     }
+   ]
 }
