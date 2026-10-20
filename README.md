@@ -46,7 +46,7 @@ No arquivo `package.json`, substituir ` "type": "commonjs"` por ` "type": "modul
 
 ```text
 {
-  "name": "projeto-node",
+  "name": "projeto",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -60,6 +60,24 @@ No arquivo `package.json`, substituir ` "type": "commonjs"` por ` "type": "modul
 }
 ```
 
+## Instalando o JSON Server
+
+Instalação global:
+
+```bash
+npm install -g json-server
+```
+
+Ou no projeto:
+
+```bash
+npm install json-server
+```
+
+
+
+
+99999999999999
 ```bash
 node 01-index.js
 ```
