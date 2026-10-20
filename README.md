@@ -132,6 +132,19 @@ Informe o conteúdo abaixo no arquivo `./projeto/db/db.json`:
 }
 ```
 
+## Iniciando o Servidor
+
+Execute:
+
+```js
+json-server --watch db.json
+```
+ou
+
+```js
+npx json-server --watch db.json 
+(neste comando, ele executa localmente sem estar instalado globalmente)
+```
 
 99999999999999
 ```bash
