@@ -172,6 +172,8 @@ http://localhost:3000/usuarios
 ![Conteúdo do banco de dados](conteudo-do-banco-de-dados.png)
 
 
+# Alteração do Banco de Dados
+
 Altere o conteúdo do arquivo `./projeto/db/db.json`, como informado abaixo:
 
 ```js
@@ -202,6 +204,18 @@ Altere o conteúdo do arquivo `./projeto/db/db.json`, como informado abaixo:
    ]
 }
 ```
+
+Nova saída:
+
+```text
+```
+
+![Nova saída do JSON Server](nova-saida-json-server.png)
+
+![Novo conteúdo do banco de dados](novo-conteudo-do-banco-de-dados.png)
+
+
+
 
 99999999999999
 ```bash
