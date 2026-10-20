@@ -20,7 +20,16 @@ GET {{url}}/tarefas
 GET {{url}}/tarefas/1
 
 ### 
-GET {{url}}/tarefas?_page=1&_limit=2
+GET {{url}}/tarefas?_page=1&_per_page=2
 
 ### 
 GET {{url}}/usuarios?nome=Ana
+
+### Para ordenar de forma ascendente:
+GET {{url}}/usuarios?_sort=nome
+
+### Para ordenar de forma descendente, use um sinal de menos antes do campo:
+GET {{url}}/usuarios?_sort=-nome
+
+### Para buscar “ana” dentro do campo nome, use o operador contains, que ignora maiúsculas e minúsculas:
+GET {{url}}/usuarios?nome:contains=ana
