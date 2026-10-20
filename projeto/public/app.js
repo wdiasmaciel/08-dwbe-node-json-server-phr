@@ -1,6 +1,6 @@
 function listarTarefas() {
-    const url = 'https://solid-spork-q79wg9gg79wrhwpj-3000.app.github.dev/tarefas';
     const container = document.getElementById('container');
+    const url = 'https://solid-spork-q79wg9gg79wrhwpj-3000.app.github.dev/tarefas';
     fetch(url)
         .then((resposta) => resposta.json())
         .then((dados) => {
@@ -8,9 +8,10 @@ function listarTarefas() {
         });
 }
 
-function listarTarefaPorId(id) {
-    const url = `https://solid-spork-q79wg9gg79wrhwpj-3000.app.github.dev/tarefas/${id}`;
+function listarTarefaPorId() {
+    const id = document.getElementById("id").value;
     const container = document.getElementById('container');
+    const url = `https://solid-spork-q79wg9gg79wrhwpj-3000.app.github.dev/tarefas/${id}`;
     fetch(url)
         .then((resposta) => resposta.json())
         .then((dados) => {
