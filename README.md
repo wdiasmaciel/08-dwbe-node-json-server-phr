@@ -233,7 +233,8 @@ http://localhost:3000/tarefas
 ![Nova saída do JSON Server](nova-saida-json-server.png)
 
 ![Novo conteúdo do banco de dados](novo-conteudo-do-banco-de-dados.png)
-```
+
+---
 
 ## Cliente
 
