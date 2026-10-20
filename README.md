@@ -74,6 +74,26 @@ Ou no projeto:
 npm install json-server
 ```
 
+Caso seja instalado no projeto, observar as alterações no arquivo `package.json`:
+
+```js
+{
+  "name": "projeto",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "dependencies": {
+    "json-server": "^1.0.0-beta.15"
+  }
+}
+```
 
 
 
