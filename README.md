@@ -258,6 +258,13 @@ Criar o arquivo `./projeto/public/app.js`:
 
 Na aba `Portas` do terminal, tornar a porta da aplicação `pública`.
 
+# JSON Server
+
+Para rodar em outra porta?
+
+``bash
+json-server --watch db.json--port4000
+```
 
 99999999999999
 ```bash
