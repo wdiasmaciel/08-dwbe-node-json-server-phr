@@ -386,13 +386,19 @@ function imprimir(dados) {
 
 Na aba `Portas` do terminal, tornar a porta da aplicação `pública`.
 
-# JSON Server
+# Observações sobre o JSON Server
 
-Para rodar em outra porta?
+Para rodar em outra porta:
 
-``bash
-json-server --watch db.json--port4000
+```bash
+json-server --watch db.json --port4000
 ```
+
+```bash
+json-server --watch db.json --delay2000
+```
+
+
 
 99999999999999
 ```bash
