@@ -109,8 +109,8 @@ cd db
 
 Crie o arquivo `db.json`:
 
-```
-db.json
+```bash
+touch db.json
 ```
 
 99999999999999
