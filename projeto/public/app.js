@@ -22,7 +22,6 @@ function listarTarefaPorId() {
 }
 
 function inserirTarefa() {
-    const id = document.getElementById("post-id-da-tarefa").value;
     const titulo = document.getElementById("post-titulo-da-tarefa").value;
     const status = document.getElementById("post-status-da-tarefa").value;
 
