@@ -514,18 +514,7 @@ No VS Code, instalar a extensão `REST Client`:
 ![Extensão REST Client](./img/restclient.png)
 
 
-Criar os arquivos `02-index.js` e `02-index.http`.
-
-Conteúdo do arquivo `02-index.http`:
-
-```text
-GET http://localhost:3000
-```
-
-Criar os arquivos `03-index.js` e `03-index.http`.
-
-Conteúdo do arquivo `03-index.http`:
-
+Criar o arquivo `teste.http`
 ```text
 # Isto é um comentário.
 //Isto também é um comentário.
@@ -537,13 +526,13 @@ GET http://localhost:3000
 GET http://localhost:3000/
 
 ### Isto é um separador de requisições:
-GET http://localhost:3000/sobre
+GET http://localhost:3000/usuarios
 
 ### Isto é um separador de requisições:
 GET http://localhost:3000/contato
 
 ### Isto é um separador de requisições:
-GET http://localhost:3000/produtos
+GET http://localhost:3000/tarefas
 ```
 
 Criar os arquivos `04-index.js` e `04-index.http`.
