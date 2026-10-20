@@ -243,6 +243,16 @@ Criar a pasta `./projeto/public/`:
 mkdir public
 ```
 
+Criar o arquivo `./projeto/public/index.html`:
+
+```html
+```
+
+Criar o arquivo `./projeto/public/app.js`:
+
+```js
+
+```
 
 99999999999999
 ```bash
