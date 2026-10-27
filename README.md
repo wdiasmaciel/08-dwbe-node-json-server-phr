@@ -393,7 +393,7 @@ function imprimir(dados) {
 Para rodar em outra porta:
 
 ```bash
-json-server --watch db.json --port4000
+json-server --watch db.json --port 4000
 ```
 
 ## Usando Delay (simular Internet lenta). 
@@ -401,7 +401,7 @@ json-server --watch db.json --port4000
 Muito útil para testes:
 
 ```bash
-json-server --watch db.json --delay2000
+json-server --watch db.json --delay 2000
 ```
 
 Delay:
